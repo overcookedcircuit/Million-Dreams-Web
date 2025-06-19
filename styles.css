@@ -1,363 +1,135 @@
+/* Reset + font */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Quicksand", sans-serif;
-    font-size: 62.5%;
-    font-size: 10px;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
 }
 
-/*-- Inspiration taken from abdo steif -->
-/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
-
-/* Navbar section */
-
+/* Navbar styles */
 .nav {
-    width: 100%;
-    height: 65px;
-    position: fixed;
-    line-height: 65px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: all 0.4s ease;
-    z-index: 9999;
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  transition: all 0.4s ease;
+  z-index: 9999;
+  height: 65px;
+  line-height: 65px;
 }
 
-.nav .container-fluid {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  max-width: 100% !important;
-  width: 100% !important;
+.nav-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 65px;
 }
 
-.nav .logo {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
+/* Logo on the left */
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
 }
 
-.nav div.main_list {
-  padding-right: 0 !important;
-  margin-right: 0 !important;
+.logo a:hover {
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
 }
 
+/* Nav links on the right */
 .navlinks {
+  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
-  list-style: none;
 }
 
 .navlinks li {
-  margin-left: 3rem;
+  margin-left: 2rem;
+  position: relative;
 }
 
-.navlinks li:first-child {
-  margin-left: 0;
+.navlinks li a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  padding: 0.5rem;
 }
 
-.nav div.logo {
-    padding: 0;
+.navlinks li a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #f9f9f9, 0 0 15px #9a02ff;
 }
 
-.nav div.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
-}
 
-.nav div.logo a:hover {
-    color: #00E676;
-}
-
-.nav div.main_list {
-    height: 65px;
-}
-
-/* Top-level nav list is flex */
-.nav div.main_list > ul {
-    width: 100%;
-    height: 65px;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav div.main_list > ul > li {
-    position: relative;
-    width: auto;
-    height: 65px;
-    padding: 0;
-    padding-right: 3rem;
-}
-
-.nav div.main_list > ul > li > a {
-    text-decoration: none;
-    color: #fff;
-    line-height: 65px;
-    font-size: 2.4rem;
-}
-
-.nav div.main_list > ul > li > a:hover {
-    color: #00E676;
-}
-
-/* ------------------------ */
-/* ✅ Dropdown Fix Section */
-/* ------------------------ */
-
+/* Dropdown */
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    z-index: 1000;
-    padding: 5px 0;
-    list-style: none;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  display: none;
+  list-style: none;
+  padding: 5px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown.open .dropdown-menu {
-    display: block;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-.dropdown-menu > li {
-    display: block;
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  color: #333;
 }
 
-.dropdown-menu > li > a {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-    font-size: 1.6rem;
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
 }
 
-.dropdown-menu > li > a:hover {
-    background-color: #f5f5f5;
+/* Affix (scroll) state */
+.affix {
+  background-color: #111;
 }
 
-/* ------------------------ */
-
+/* Background video section */
 .home {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.75);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7);
 }
 
 .overlay-content {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+  position: relative;
+  z-index: 1;
+  height: 100%;
 }
 
-.navTrigger {
-    display: none;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .navTrigger {
-        display: block;
-    }
-
-    .nav div.logo {
-        margin-left: 15px;
-    }
-
-    .nav div.main_list {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-
-    .nav div.show_list {
-        height: auto;
-        display: none;
-    }
-
-    .nav div.main_list ul {
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: #111;
-        background-position: center top;
-    }
-
-    .nav div.main_list ul li {
-        width: 100%;
-        text-align: right;
-    }
-
-    .nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 3rem;
-        padding: 20px;
-    }
-
-    .nav div.media_button {
-        display: block;
-    }
-
-    /* ✅ Mobile dropdown override */
-    .dropdown-menu {
-        position: relative;
-        box-shadow: none;
-        background-color: #111;
-    }
-
-    .dropdown-menu > li > a {
-        color: white;
-        padding-left: 40px;
-    }
-
-    .dropdown-menu > li > a:hover {
-        background-color: #222;
-    }
-}
-
-/* Hamburger icon animations */
-
-.navTrigger {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    margin: auto;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    bottom: 0;
-}
-
-.navTrigger i {
-    background-color: #fff;
-    border-radius: 2px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-}
-
-.navTrigger i:nth-child(1) {
-    animation: outT 0.8s reverse backwards;
-}
-
-.navTrigger i:nth-child(2) {
-    margin: 5px 0;
-    animation: outM 0.8s reverse backwards;
-}
-
-.navTrigger i:nth-child(3) {
-    animation: outBtm 0.8s reverse backwards;
-}
-
-.navTrigger.active i:nth-child(1) {
-    animation: inT 0.8s forwards;
-}
-
-.navTrigger.active i:nth-child(2) {
-    animation: inM 0.8s forwards;
-}
-
-.navTrigger.active i:nth-child(3) {
-    animation: inBtm 0.8s forwards;
-}
-
-/* Animations for hamburger icon */
-
-@keyframes inM {
-    50% { transform: rotate(0deg); }
-    100% { transform: rotate(45deg); }
-}
-
-@keyframes outM {
-    50% { transform: rotate(0deg); }
-    100% { transform: rotate(45deg); }
-}
-
-@keyframes inT {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(9px) rotate(0deg); }
-    100% { transform: translateY(9px) rotate(135deg); }
-}
-
-@keyframes outT {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(9px) rotate(0deg); }
-    100% { transform: translateY(9px) rotate(135deg); }
-}
-
-@keyframes inBtm {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-9px) rotate(0deg); }
-    100% { transform: translateY(-9px) rotate(135deg); }
-}
-
-@keyframes outBtm {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-9px) rotate(0deg); }
-    100% { transform: translateY(-9px) rotate(135deg); }
-}
-
-.affix {
-    padding: 0;
-    background-color: #111;
-}
-
-/* Content Section */
-
+/* Content */
 .myH2 {
-    text-align: center;
-    font-size: 4rem;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 80px;
 }
-
 .myP {
-    text-align: justify;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 20px;
-}
-
-@media all and (max-width: 700px) {
-    .myP {
-        padding: 2%;
-    }
+  text-align: center;
+  padding: 0 10%;
+  font-size: 2rem;
 }
