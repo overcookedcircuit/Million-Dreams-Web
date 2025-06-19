@@ -16,8 +16,8 @@ body, html {
   background-color: transparent;
   transition: all 0.4s ease;
   z-index: 9999;
-  height: 65px;
-  line-height: 65px;
+  height: 100px;
+  line-height: 100px;
 }
 
 .nav-wrapper {
@@ -27,13 +27,14 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100px;
 }
 
 /* Logo on the left */
 .logo a {
   text-decoration: none;
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.2rem;
 }
 
 .logo a:hover {
@@ -55,7 +56,7 @@ body, html {
 
 .navlinks li a {
   color: white;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   text-decoration: none;
   padding: 0.5rem;
 }
@@ -85,8 +86,8 @@ body, html {
 
 .dropdown-menu li a {
   display: block;
-  padding: 10px 20px;
-  font-size: 1.4rem;
+  padding: 12px 24px;
+  font-size: 1.8rem;
   color: #333;
 }
 
