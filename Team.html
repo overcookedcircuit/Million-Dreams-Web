@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Million Dreams</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-wrapper">
+      <div class="logo">
+        <a href="MillionDreams.html">Million Dreams</a>
+      </div>
+      <ul class="navlinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Opportunities</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Our Values <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Family</a></li>
+            <li><a href="#">Hope</a></li>
+            <li><a href="#">Freedom</a></li>
+            <li><a href="#">Reward</a></li>
+          </ul>
+        </li>
+        <li><a href="Team.html">The Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="home">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="videos/background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-content"></div>
+  </section>
+
+  <div>
+    <h1 style="text-align: center;">The Team</h1>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="images/group_pic.jpeg" alt="Team Member 1">
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Shrink navbar on scroll -->
+  <script>
+    $(window).scroll(function () {
+      if ($(document).scrollTop() > 50) {
+        $('.nav').addClass('affix');
+      } else {
+        $('.nav').removeClass('affix');
+      }
+    });
+  </script>
+
+</body>
+<footer style="text-align: center;">&copy; Million Dreams</footer>
+</html>
