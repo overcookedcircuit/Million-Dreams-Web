@@ -202,6 +202,49 @@ body, html {
   color: #eee;
 }
 
+/* team */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.team-member {
+  background: #111;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  max-width: 250px;
+  text-align: center;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .offer-card {
+    padding: 20px;
+  }
+  .offer-card h2 {
+    font-size: 2rem;
+  }
+  .offer-card p {
+    font-size: 1.4rem;
+  }
+}
+
 /* Animation */
 @keyframes fadeUp {
   to {
