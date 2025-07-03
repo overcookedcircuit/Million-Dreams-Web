@@ -243,6 +243,10 @@ body, html {
   text-align: center;
 }
 
+.team-member:hover {
+  box-shadow: 0 0 15px #D4AF37, 0 0 30px rgb(191, 162, 0);
+}
+
 .gold-element {
   background-color: #FFD700; /* Base gold color */
   background: linear-gradient(to bottom, #FFF6BF, #FFD700, #E6B800); /* Gradient */
