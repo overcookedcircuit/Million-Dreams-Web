@@ -71,7 +71,7 @@ body, html {
 
 .navlinks li a:hover {
   color: #ffffff;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #f9f9f9, 0 0 15px gold;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #f9f9f9, 0 0 15px #D4AF37;
 }
 
 
@@ -143,6 +143,28 @@ body, html {
   font-size: 2rem;
 }
 
+/* Logo center section */
+.logo-center-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px; /* You can adjust this height */
+  background-color: #111; /* Optional: add a background for contrast */
+  padding: 40px 20px;
+}
+
+.centered-logo {
+  max-width: 500px; /* Adjust as needed */
+  height: auto;
+  filter: drop-shadow(0 0 10px #D4AF37); /* Optional: glow effect */
+  transition: transform 0.3s ease;
+}
+
+.centered-logo:hover {
+  transform: scale(1.10);
+}
+
+
 /* 4 things related to MIllion Dreams */
 .offer-section {
   padding: 60px 10%;
@@ -154,7 +176,7 @@ body, html {
 .offer-title {
   font-size: 3.6rem;
   margin-bottom: 40px;
-  text-shadow: 0 0 10px gold;
+  text-shadow: 0 0 10px #D4AF37;
 }
 
 .grid-container {
@@ -179,21 +201,21 @@ body, html {
 
 .offer-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 15px gold, 0 0 30px rgb(191, 162, 0);
+  box-shadow: 0 0 15px #D4AF37, 0 0 30px rgb(191, 162, 0);
 }
 
 /* Icon */
 .offer-icon {
   font-size: 3.6rem;
   margin-bottom: 15px;
-  color: gold;
+  color: #D4AF37;
 }
 
 /* Typography */
 .offer-card h2 {
   font-size: 2.2rem;
   margin-bottom: 15px;
-  color: gold;
+  color: #D4AF37;
 }
 
 .offer-card p {
@@ -215,10 +237,24 @@ body, html {
   background: #111;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px 	#D4AF37;
   transition: transform 0.3s ease;
   max-width: 250px;
   text-align: center;
+}
+
+.gold-element {
+  background-color: #FFD700; /* Base gold color */
+  background: linear-gradient(to bottom, #FFF6BF, #FFD700, #E6B800); /* Gradient */
+  /* Optional: Add a subtle noise texture */
+  /* background-image: url('gold_texture.png'); */
+  /* Optional: Add a slight blur for a smoother effect */
+  /* filter: blur(0.5px); */
+  /* Optional: Use a radial gradient for highlights */
+  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.2); */
+  color: #000; /* Or any contrasting color for text */
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .team-member:hover {
